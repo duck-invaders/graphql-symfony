@@ -1,0 +1,6 @@
+AstronautInput:
+    type: input-object
+    config:
+        fields:
+            pseudo:
+                type: 'String!'

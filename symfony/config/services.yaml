@@ -29,6 +29,9 @@ services:
         resource: '../src/Resolver'
         tags: ['overblog_graphql.resolver']
 
+    App\Mutation\:
+        resource: '../src/Mutation'
+        tags: ['overblog_graphql.mutation']
 
     planet.resolver:
         alias: App\Resolver\PlanetResolver

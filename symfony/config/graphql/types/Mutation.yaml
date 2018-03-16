@@ -1,0 +1,17 @@
+MutationSuccess:
+    type: object
+    config:
+        fields:
+            content:
+                type: String!
+
+Mutation:
+    type: object
+    config:
+        fields:
+            NewAstronaut:
+                type: MutationSuccess
+                resolve: "@=mutation('NewAstronaut', [args['input']['pseudo']])"
+                args:
+                    input:
+                        type: AstronautInput!
