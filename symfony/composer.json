@@ -4,6 +4,7 @@
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
+        "overblog/graphql-bundle": "^0.11.0",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
@@ -13,6 +14,7 @@
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
+        "overblog/graphiql-bundle": "^0.1.0",
         "symfony/dotenv": "^4.0"
     },
     "config": {

@@ -24,8 +24,8 @@ class Planet
     /**
      * @ORM\ManyToMany(targetEntity="Astronaut")
      * @ORM\JoinTable(name="planet_astronaut",
-     *      joinColumns={@JoinColumn(name="planet_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@JoinColumn(name="astronaut_id", referencedColumnName="id", unique=true)}
+     *      joinColumns={@ORM\JoinColumn(name="planet_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="astronaut_id", referencedColumnName="id", unique=true)}
      *      )
      */
     private $astronauts;
@@ -77,5 +77,13 @@ class Planet
         $this->id = $id;
 
         return $this;
+    }
+
+    /**
+     * Get the value of id
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }
