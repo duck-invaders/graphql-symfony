@@ -1,0 +1,12 @@
+Astronaut:
+    type: object
+    config:
+        fields:
+            id:
+                type: 'Int!'
+            pseudo:
+                type: 'String!'
+            grade:
+                type: 'Grade'
+            planet:
+                type: 'Planet'
