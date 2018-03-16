@@ -19,16 +19,15 @@ class PlanetRepository extends ServiceEntityRepository
         parent::__construct($registry, Planet::class);
     }
 
-    /*
-    public function findBySomething($value)
+    public function findByAstronaut($id)
     {
         return $this->createQueryBuilder('p')
-            ->where('p.something = :value')->setParameter('value', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->innerJoin('p.astronauts', 'a')
+            ->andWhere('a.id = :id')
+            ->setParameter('id', $id)
             ->getQuery()
-            ->getResult()
+            ->getOneOrNullResult();
         ;
     }
-    */
+    
 }

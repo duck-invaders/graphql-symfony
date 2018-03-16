@@ -10,3 +10,4 @@ Astronaut:
                 type: 'Grade'
             planet:
                 type: 'Planet'
+                resolve: "@=service('planet.resolver').resolveInAstronaut(value, args, context, info)"
