@@ -19,13 +19,13 @@ class Planet
     /**
      * @ORM\Column(type="string")
      */
-    private $name; 
+    private $name;
 
     /**
      * @ORM\ManyToMany(targetEntity="Astronaut")
      * @ORM\JoinTable(name="planet_astronaut",
-     *      joinColumns={@JoinColumn(name="planet_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@JoinColumn(name="astronaut_id", referencedColumnName="id", unique=true)}
+     *      joinColumns={@ORM\JoinColumn(name="planet_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="astronaut_id", referencedColumnName="id", unique=true)}
      *      )
      */
     private $astronauts;
@@ -49,7 +49,7 @@ class Planet
 
     /**
      * Get the value of name
-     */ 
+     */
     public function getName()
     {
         return $this->name;
@@ -59,7 +59,7 @@ class Planet
      * Set the value of name
      *
      * @return  self
-     */ 
+     */
     public function setName($name)
     {
         $this->name = $name;
@@ -71,7 +71,7 @@ class Planet
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId($id)
     {
         $this->id = $id;
